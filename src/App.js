@@ -2,11 +2,31 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import LandingPage from '../src/components/pages/landingPage/landingpage';
 import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
+import Storypage2 from './components/Storypage2';
+import Endpage from './components/Endpage';
+import FeelingWheel from './components/pages/feelingWheel';
 
 const delay = 5;
 
+const apiLocal = 'http://localhost:4000/api/emotion/'
+
+const apiHeroku = 'https://feelings-api1.herokuapp.com/api/emotion'
+
 export default function App() {
-  const [show, setShow] = useState(false);
+	
+	//FETCH EMOTION STORY
+	const [emotion, setEmotion] = useState(null)
+
+	const getStory = async (emotionName) => {
+		const response = await fetch(apiLocal + {emotionName},{
+			headers: {Accept: "application/json"}
+		})
+		const data = await response.json()
+		setEmotion(data)
+	}
+	
+	//TIMER DELAY WELCOME PAGE TO LANDING PAGE
+	const [show, setShow] = useState(false);
 
   useEffect(() => {
     let timer1 = setTimeout(() => setShow(true), delay * 1000);
@@ -15,9 +35,23 @@ export default function App() {
     };
   }, []);
 
+	return show ? (
+		<div>
+			<WelcomeScreen />
+		</div>
+	) : (
+		<div>
+			<LandingPage />
+			<Storypage2 getStory={getStory}/>
+			<Endpage />
+		</div>
+	);
   return show ? (
     <div>
       <WelcomeScreen />
+      <FeelingWheel />
+      <Storypage2 />
+      <Endpage />
     </div>
   ) : (
     <div>
