@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import LandingPage from '../src/components/pages/landingPage/landingpage';
 import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
+import FeelingWheel from '../src/components/pages/feelingWheel';
 
 const delay = 5;
 
@@ -17,7 +18,8 @@ export default function App() {
 
   return show ? (
     <div>
-      <WelcomeScreen />
+      {/* <WelcomeScreen /> */}
+      <FeelingWheel />
     </div>
   ) : (
     <div>
