@@ -2,26 +2,30 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import LandingPage from '../src/components/pages/landingPage/landingpage';
 import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
+import Storypage2 from './components/Storypage2';
+import Endpage from './components/Endpage';
 
 const delay = 5;
 
 export default function App() {
-  const [show, setShow] = useState(false);
+	const [show, setShow] = useState(false);
 
-  useEffect(() => {
-    let timer1 = setTimeout(() => setShow(true), delay * 1000);
-    return () => {
-      clearTimeout(timer1);
-    };
-  }, []);
+	useEffect(() => {
+		let timer1 = setTimeout(() => setShow(true), delay * 1000);
+		return () => {
+			clearTimeout(timer1);
+		};
+	}, []);
 
-  return show ? (
-    <div>
-      <WelcomeScreen />
-    </div>
-  ) : (
-    <div>
-      <LandingPage />
-    </div>
-  );
+	return show ? (
+		<div>
+			<WelcomeScreen />
+		</div>
+	) : (
+		<div>
+			<LandingPage />
+			<Storypage2 />
+			<Endpage />
+		</div>
+	);
 }
