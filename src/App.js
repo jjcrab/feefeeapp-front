@@ -5,6 +5,9 @@ import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
 import Storypage2 from './components/Storypage2';
 import Endpage from './components/Endpage';
 import FeelingWheel from './components/pages/feelingWheel';
+import Slider from './components/Slider';
+
+import 'bootstrap/dist/css/bootstrap.css';
 
 const delay = 5;
 
@@ -40,12 +43,16 @@ export default function App() {
 	return show ? (
 		<div>
 			<WelcomeScreen />
+			<Slider />
 		</div>
 	) : (
 		<div>
 			<LandingPage />
+<<<<<<< HEAD
 			<Storypage2 getStory={getStory}/>
 			<Endpage />
+=======
+>>>>>>> 7e5a675 (Carousel)
 		</div>
 	);
 }
