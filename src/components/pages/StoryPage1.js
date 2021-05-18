@@ -1,6 +1,6 @@
 import React from 'react';
 
-const storyPage1 = (props) => {
+const StoryPage1 = (props) => {
 	return (
 		<div>
 			<h3>Story Page 1 Yuck feels like you're sick or need to throw up.</h3>
@@ -9,4 +9,4 @@ const storyPage1 = (props) => {
 	);
 };
 
-export default storyPage1;
+export default StoryPage1;
