@@ -8,6 +8,8 @@ import FeelingWheel from './components/pages/feelingWheel';
 
 const delay = 5;
 
+const changes = 5
+
 const apiLocal = 'http://localhost:4000/api/emotion/'
 
 const apiHeroku = 'https://feelings-api1.herokuapp.com/api/emotion'
