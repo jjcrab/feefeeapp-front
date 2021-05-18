@@ -4,6 +4,7 @@ import LandingPage from '../src/components/pages/landingPage/landingpage';
 import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
 import Storypage2 from './components/Storypage2';
 import Endpage from './components/Endpage';
+import FeelingWheel from './components/pages/feelingWheel';
 
 const delay = 5;
 
@@ -20,12 +21,13 @@ export default function App() {
   return show ? (
     <div>
       <WelcomeScreen />
+      <FeelingWheel />
+      <Storypage2 />
+      <Endpage />
     </div>
   ) : (
     <div>
       <LandingPage />
-      <Storypage2 />
-      <Endpage />
     </div>
   );
 }
