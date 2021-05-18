@@ -10,7 +10,7 @@ const UserInput2 = (props) => {
 				<input type='text'></input>
 				<input type='text'></input>
 			</form>
-			<p>psst! Keepfilling in those blanks!</p>
+			<p>psst! Keep filling in those blanks!</p>
 		</div>
 	);
 };
