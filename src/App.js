@@ -46,16 +46,4 @@ export default function App() {
 			<Endpage />
 		</div>
 	);
-  return show ? (
-    <div>
-      <WelcomeScreen />
-      <FeelingWheel />
-      <Storypage2 />
-      <Endpage />
-    </div>
-  ) : (
-    <div>
-      <LandingPage />
-    </div>
-  );
 }
