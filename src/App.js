@@ -41,7 +41,7 @@ export default function App() {
 	) : (
 		<div>
 			<LandingPage />
-			<Storypage2 />
+			<Storypage2 getStory={getStory}/>
 			<Endpage />
 		</div>
 	);
