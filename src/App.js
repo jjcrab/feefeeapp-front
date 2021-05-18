@@ -8,24 +8,24 @@ import Endpage from './components/Endpage';
 const delay = 5;
 
 export default function App() {
-	const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
 
-	useEffect(() => {
-		let timer1 = setTimeout(() => setShow(true), delay * 1000);
-		return () => {
-			clearTimeout(timer1);
-		};
-	}, []);
+  useEffect(() => {
+    let timer1 = setTimeout(() => setShow(true), delay * 1000);
+    return () => {
+      clearTimeout(timer1);
+    };
+  }, []);
 
-	return show ? (
-		<div>
-			<WelcomeScreen />
-		</div>
-	) : (
-		<div>
-			<LandingPage />
-			<Storypage2 />
-			<Endpage />
-		</div>
-	);
+  return show ? (
+    <div>
+      <WelcomeScreen />
+    </div>
+  ) : (
+    <div>
+      <LandingPage />
+      <Storypage2 />
+      <Endpage />
+    </div>
+  );
 }
