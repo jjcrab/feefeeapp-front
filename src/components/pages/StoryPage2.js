@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Storypage2 = () => {
+const StoryPage2 = () => {
 	return (
 		<div>
 			<h3>Story Page 2</h3>
@@ -14,4 +14,4 @@ const Storypage2 = () => {
 	);
 };
 
-export default Storypage2;
+export default StoryPage2;

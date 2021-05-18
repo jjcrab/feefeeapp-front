@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import LandingPage from '../src/components/pages/landingPage/landingpage';
 import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
-import Storypage2 from './components/Storypage2';
-import Endpage from './components/Endpage';
+import Slider from './components/Slider';
+
+import 'bootstrap/dist/css/bootstrap.css';
 
 const delay = 5;
 
@@ -20,12 +21,11 @@ export default function App() {
 	return show ? (
 		<div>
 			<WelcomeScreen />
+			<Slider />
 		</div>
 	) : (
 		<div>
 			<LandingPage />
-			<Storypage2 />
-			<Endpage />
 		</div>
 	);
 }

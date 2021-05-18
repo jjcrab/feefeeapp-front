@@ -1,19 +1,17 @@
 import React from 'react';
 
-const storyPage3 = (props) => {
+const StoryPage3 = (props) => {
+	return (
+		<div>
+			<h3>Story Page 3</h3>
+			<p>When Doug feels angry he:</p>
+			<ul>
+				<li>Grumbles</li>
+				<li>Wants to namecall</li>
+				<li>Cries, sometimes</li>
+			</ul>
+		</div>
+	);
+};
 
-
-    return(
-        <div>
-            <h3>Story Page 3</h3>
-            <p>When Doug feels angry he:</p>
-            <ul>
-                <li>Grumbles</li>
-                <li>Wants to namecall</li>
-                <li>Cries, sometimes</li>
-            </ul>
-        </div>
-    )
-}
-
-export default storyPage3;
+export default StoryPage3;
