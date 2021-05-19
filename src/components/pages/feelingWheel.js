@@ -10,12 +10,36 @@ const data = [
   { title: 'Fear 😨', value: 16, color: '#C4C4C4' },
   { title: 'Surprise 😲', value: 16, color: '#C4C4C4' },
   { title: 'Yuck 🤮', value: 16, color: '#C4C4C4' },
-  { title: 'Happy 😀', value: 16, color: '#C4C4C4' },
-  { title: 'Sad 😟', value: 16, color: '#C4C4C4' },
+  { title: 'Joy 😀', value: 16, color: '#C4C4C4' },
+  { title: 'Sadness 😟', value: 16, color: '#C4C4C4' },
 ];
 
-function feelingWheel(props) {
+function FeelingWheel({ setEmotion }) {
   const lineWidth = 85;
+  let emotionWord;
+
+  const getStory = async (emotionId) => {
+    const word = {
+      fear: 1,
+      anger: 2,
+      joy: 3,
+      sadness: 4,
+      yuck: 5,
+      surprise: 6,
+    };
+
+    let apiHeroku = `https://feelings-api1.herokuapp.com/api/emotion/${word[emotionId]}`;
+    const response = await fetch(apiHeroku, {
+      headers: { Accept: 'application/json' },
+    });
+
+    const data = await response.json();
+    // const randomStory = 1 + Math.floor((Math.random() * 2));
+    // console.log(randomStory)
+    // console.log(data, 'sss');
+
+    setEmotion(data);
+  };
 
   return (
     <div>
@@ -36,8 +60,11 @@ function feelingWheel(props) {
         }}
         labelPosition={100 - lineWidth / 2}
         onClick={(e) => {
-          e.preventDefault();
-          console.log(e.target.textContent);
+          emotionWord = e.target.textContent.toLowerCase().split(' ')[0];
+          getStory(emotionWord);
+          setEmotion(emotionWord);
+          let nextPage = document.querySelector('carousel-control-next');
+          // console.log(emotion, 'final');
         }}
       />
       ;
@@ -45,4 +72,4 @@ function feelingWheel(props) {
   );
 }
 
-export default feelingWheel;
+export default FeelingWheel;
