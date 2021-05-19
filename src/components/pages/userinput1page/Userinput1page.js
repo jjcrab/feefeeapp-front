@@ -1,19 +1,21 @@
 import React from 'react';
 // import './userinput1page.css';
 
-export default function Userinput1page() {
+export default function Userinput1page({userInputs, handleInputChange}) {
   
   //Need the emotion name from the API call.
 
   const emotionNamePlaceholder = "Happy"
 
+
+
   return (
     <div>
         <h3>I feel {emotionNamePlaceholder}</h3>
         <h3>when</h3>
-        <input type="text" />
+        <input name={0} value={userInputs[0].text} onChange={handleInputChange} type="text" />
         <h3>because</h3>
-        <input types="text" />
+        <input name={1} value={userInputs[1].text} types="text" />
     </div>
   // <div> 
   //   <div class="centered">
