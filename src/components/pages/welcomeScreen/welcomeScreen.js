@@ -2,7 +2,7 @@ import React from 'react';
 import './welcomeScreen.css';
 function welcomeScreen() {
 	return (
-		<div className='grid-container'>
+		<div className='grid-container welcomescreen'>
 			<div className='h1'>This is Doug</div>
 			<div>
 				<svg
