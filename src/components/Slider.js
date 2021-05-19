@@ -22,7 +22,7 @@ const Slider = ({ userInputs, handleInputChange }) => {
         <Carousel.Item className="welcomescreen">
           <WelcomeScreen />
         </Carousel.Item>
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <StoryPage1 />
         </Carousel.Item>
         <Carousel.Item>
@@ -30,6 +30,13 @@ const Slider = ({ userInputs, handleInputChange }) => {
         </Carousel.Item>
         <Carousel.Item>
           <StoryPage3 />
+        </Carousel.Item> */}
+
+        <Carousel.Item>
+          <FeelingWheel setEmotion={setEmotion} />
+        </Carousel.Item>
+        <Carousel.Item>
+          <StoryPage1 emotion={emotion} />
         </Carousel.Item>
         <Carousel.Item>
           <Userinput1page
@@ -51,9 +58,6 @@ const Slider = ({ userInputs, handleInputChange }) => {
         </Carousel.Item>
         <Carousel.Item>
           <Endpage />
-        </Carousel.Item>
-        <Carousel.Item>
-          <FeelingWheel setEmotion={setEmotion} />
         </Carousel.Item>
       </Carousel>
     </div>

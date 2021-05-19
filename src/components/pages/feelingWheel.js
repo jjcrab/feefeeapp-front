@@ -64,7 +64,6 @@ function FeelingWheel({ setEmotion }) {
           getStory(emotionWord);
           setEmotion(emotionWord);
           let nextPage = document.querySelector('carousel-control-next');
-          // console.log(emotion, 'final');
         }}
       />
       ;
