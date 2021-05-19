@@ -79,18 +79,30 @@ h3 {
 }
 
 /* =====================Story======================== */
+.storypages {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 .emotion2Img {
-  height: 25vh;
+	height: 25vh;
+}
+.list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.story3Img {
+	margin-left: 40px;
 }
 
-
-
 /* =====================Endpage======================== */
-.center-text-on-endpage {  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+.center-text-on-endpage {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
