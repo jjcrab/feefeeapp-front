@@ -80,5 +80,17 @@ h3 {
 
 /* =====================Story======================== */
 .emotion2Img {
-	height: 25vh;
+  height: 25vh;
+}
+
+
+
+/* =====================Endpage======================== */
+.center-text-on-endpage {  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
