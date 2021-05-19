@@ -3,6 +3,7 @@ import StoryPage1 from './pages/StoryPage1';
 import StoryPage2 from './pages/StoryPage2';
 import StoryPage3 from './pages/StoryPage3';
 import UserInput2 from './pages/UserInput2';
+
 import Userinput1page from './pages/userinput1page/Userinput1page';
 
 import Input3 from './pages/Input3';
@@ -33,10 +34,12 @@ const Slider = ({ userInputs, handleInputChange }) => {
 						userInputs={userInputs}
 						handleInputChange={handleInputChange}
 					/>
-					<Userinput1page />
 				</Carousel.Item>
 				<Carousel.Item>
-					<UserInput2 />
+					<UserInput2
+						userInputs={userInputs}
+						handleInputChange={handleInputChange}
+					/>
 				</Carousel.Item>
 				<Carousel.Item>
 					<UserInput2
