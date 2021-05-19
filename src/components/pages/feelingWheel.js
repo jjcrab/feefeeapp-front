@@ -18,13 +18,13 @@ function feelingWheel(props) {
   const lineWidth = 85;
 
   return (
-    <div>
-      <h1 id="container">
+    <div id="container">
+      <h3>
         How are you feeling <br /> today?
-      </h1>
+      </h3>
       <PieChart
         lineWidth={99.9}
-        radius={PieChart.defaultProps.radius - 8}
+        radius={PieChart.defaultProps.radius - 14}
         label={({ dataEntry }) => dataEntry.title}
         data={data}
         labelStyle={{
@@ -34,7 +34,7 @@ function feelingWheel(props) {
           fontSize: '5px',
           fontWeight: 'bold',
         }}
-        labelPosition={100 - lineWidth / 2}
+        labelPosition={100 - lineWidth / 2.4}
         onClick={(e) => {
           e.preventDefault();
           console.log(e.target.textContent);
