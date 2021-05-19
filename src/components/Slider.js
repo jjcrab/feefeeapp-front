@@ -9,7 +9,7 @@ import Endpage from './pages/Endpage';
 
 import Carousel from 'react-bootstrap/Carousel';
 
-const Slider = () => {
+const Slider = ({userInputs, handleInputChange}) => {
 	return (
 		<div>
 			<Carousel interval={null} className='slider'>
@@ -23,13 +23,13 @@ const Slider = () => {
 					<StoryPage3 />
 				</Carousel.Item>
 				<Carousel.Item>
-					<UserInput1Page />
+					<UserInput1Page userInputs={userInputs} handleInputChange={handleInputChange}/>
 				</Carousel.Item>
 				<Carousel.Item>
-					<UserInput2 />
+					<UserInput2 userInputs={userInputs} handleInputChange={handleInputChange}/>
 				</Carousel.Item>
 				<Carousel.Item>
-					<Input3 />
+					<Input3 userInputs={userInputs} handleInputChange={handleInputChange}/>
 				</Carousel.Item>
 				<Carousel.Item>
 					<Endpage />
