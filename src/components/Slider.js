@@ -14,6 +14,7 @@ import WelcomeScreen from './pages/welcomeScreen/welcomeScreen';
 import Carousel from 'react-bootstrap/Carousel';
 
 const Slider = ({ userInputs, handleInputChange }) => {
+  const [emotion, setEmotion] = useState(null);
   return (
     <div>
       <Carousel interval={null} className="slider">
@@ -21,16 +22,16 @@ const Slider = ({ userInputs, handleInputChange }) => {
           <WelcomeScreen />
         </Carousel.Item>
         <Carousel.Item>
-          <FeelingWheel />
+          <FeelingWheel setEmotion={setEmotion} emotion={emotion} />
         </Carousel.Item>
         <Carousel.Item>
-          <StoryPage1 />
+          <StoryPage1 emotion={emotion} />
         </Carousel.Item>
         <Carousel.Item>
-          <StoryPage2 />
+          <StoryPage2 emotion={emotion} />
         </Carousel.Item>
         <Carousel.Item>
-          <StoryPage3 />
+          <StoryPage3 emotion={emotion} />
         </Carousel.Item>
         <Carousel.Item>
           <Userinput1page
