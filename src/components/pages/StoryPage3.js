@@ -2,7 +2,7 @@ import React from 'react';
 
 const StoryPage3 = (props) => {
 	return (
-		<div>
+		<div className='pages'>
 			<h3>Story Page 3</h3>
 			<p>When Doug feels angry he:</p>
 			<ul>

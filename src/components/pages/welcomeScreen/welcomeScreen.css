@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
 }
+
+
 .grid-container {
   display: grid;
   justify-content: space-evenly;
@@ -18,29 +20,4 @@
     '.';
 }
 
-.h1 {
-  font-family: Risque;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 96px;
-  text-align: center;
-  color: #000000;
-}
-.h11 {
-  font-family: Risque;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 96px;
-  text-align: center;
-  color: #000000;
-}
 
-.h2 {
-  font-family: Risque;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 64px;
-  text-align: center;
-  color: #000000;
-  align-self: start;
-}
