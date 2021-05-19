@@ -2,12 +2,32 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import LandingPage from '../src/components/pages/landingPage/landingpage';
 import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
-import Storypage2 from './components/Storypage2';
-import Endpage from './components/Endpage';
+// import FeelingWheel from './components/pages/feelingWheel';
+import Slider from './components/Slider';
+
+import 'bootstrap/dist/css/bootstrap.css';
 
 const delay = 5;
 
+const changes = 5;
+
+const apiLocal = 'http://localhost:4000/api/emotion/';
+
+const apiHeroku = 'https://feelings-api1.herokuapp.com/api/emotion';
+
 export default function App() {
+	//FETCH EMOTION STORY
+	const [emotion, setEmotion] = useState(null);
+
+	const getStory = async (emotionName) => {
+		const response = await fetch(apiLocal + { emotionName }, {
+			headers: { Accept: 'application/json' },
+		});
+		const data = await response.json();
+		setEmotion(data);
+	};
+
+	//TIMER DELAY WELCOME PAGE TO LANDING PAGE
 	const [show, setShow] = useState(false);
   const [userInputs, setUserInputs] = useState(
     [
@@ -34,21 +54,15 @@ export default function App() {
 		};
 	}, []);
 
+	return show ? (
+		<div>
+			<WelcomeScreen />
 
-	return (
-    <div>
-      <input name={0} value={userInputs[0].text} onChange={handleInputChange}></input>
-      <input name={1} value={userInputs[1].text} onChange={handleInputChange}></input>
-      show ? (
-      <div>
-        <WelcomeScreen />
-      </div>
-    ) : (
-      <div>
-        <LandingPage />
-        <Storypage2 />
-        <Endpage />
-      </div>
-    </div>
+			<Slider />
+		</div>
+	) : (
+		<div>
+			<LandingPage />
+		</div>
 	);
 }
