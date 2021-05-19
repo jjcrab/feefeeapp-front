@@ -1,30 +1,14 @@
 import React from 'react';
 
-const UserInput2 = ({userInputs, handleInputChange}) => {
+const UserInput2 = (props) => {
 	return (
-		<div className='pages'>
+		<div>
 			<h3>usertInput2</h3>
 			<p>When I feel angry I:</p>
 			<form>
-				<input 
-          name={2} 
-          value={userInputs[2].text} 
-          onChange={handleInputChange} 
-          type='text' 
-        />
-				<input 
-          name={3} 
-          value={userInputs[3].text} 
-          onChange={handleInputChange} 
-          type='text' 
-        />
-				<input 
-          name={4} 
-          value={userInputs[4].text} 
-          onChange={handleInputChange} 
-          type='text' 
-        />
-
+				<input type='text'></input>
+				<input type='text'></input>
+				<input type='text'></input>
 			</form>
 			<p>psst! Keep filling in those blanks!</p>
 		</div>
