@@ -30,6 +30,7 @@ h3{
 	color: var(--black);
 }
 
+/* This is the font on the wheel */
 h4{
 	font-family: var(--main-font);
 	text-align: center;
