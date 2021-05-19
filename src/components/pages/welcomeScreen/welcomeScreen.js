@@ -3,7 +3,7 @@ import './welcomeScreen.css';
 function welcomeScreen() {
 	return (
 		<div className='grid-container welcomescreen'>
-			<div className='h1'>This is Doug</div>
+			<h3>This is Doug</h3>
 			<div>
 				<svg
 					width='593'
@@ -43,8 +43,8 @@ function welcomeScreen() {
 					/>
 				</svg>
 			</div>
-			<div className='h11'>Your feelings pal</div>
-			<div className='h2'>He feels what you feel</div>
+			<h2>Your feelings pal</h2>
+			<h3>He feels what you feel</h3>
 		</div>
 	);
 }

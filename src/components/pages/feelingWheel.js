@@ -19,9 +19,9 @@ function feelingWheel(props) {
 
   return (
     <div>
-      <h1 id="container">
+      <h2 id="container">
         How are you feeling <br /> today?
-      </h1>
+      </h2>
       <PieChart
         lineWidth={99.9}
         radius={PieChart.defaultProps.radius - 8}

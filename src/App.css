@@ -1,5 +1,48 @@
-body {
-	font-family: Risque;
+@import url('https://fonts.googleapis.com/css2?family=Risque&family=Roboto:wght@700&display=swap');
+
+:root{
+	--main-font: 'Risque', cursive;
+	--second-font: 'Roboto', sans-serif;
+	--black: black;
+	--red: #E5222D;
+	--orange: #F49132;
+	--yellow: #FBE840;
+	--green: #4FB74D;
+	--blue: #2063AD;
+	--purple: #61328F;
+}
+
+h1, h2, h3, h4, h5{
+	font-family: var(--main-font);
+	text-align: center;
+	color: var(--black)
+}
+
+h2{
+	font-family: var(--main-font);
+	text-align: center;
+	color: var(--black);
+}
+
+h3{
+	font-family: var(--main-font);
+	text-align: center;
+	color: var(--black);
+}
+
+h4{
+	font-family: var(--main-font);
+	text-align: center;
+	color: black;
+		-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: black;
+}
+
+h5{
+	font-family: var(--second-font);
+	text-align: center;
+	color: var(--orange);
 }
 
 html,
@@ -9,7 +52,6 @@ body,
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: Risque;
 }
 
 .pages {
