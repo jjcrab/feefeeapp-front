@@ -29,6 +29,21 @@ export default function App() {
 
 	//TIMER DELAY WELCOME PAGE TO LANDING PAGE
 	const [show, setShow] = useState(false);
+	const [userInputs, setUserInputs] = useState([
+		{ text: '' },
+		{ text: '' },
+		{ text: '' },
+		{ text: '' },
+		{ text: '' },
+		{ text: '' },
+	]);
+
+	const handleInputChange = (evt) => {
+		let newInput = [...userInputs];
+		newInput[evt.target.name] = { text: evt.target.value };
+		setUserInputs(newInput);
+		console.log(newInput);
+	};
 
 	useEffect(() => {
 		let timer1 = setTimeout(() => setShow(true), delay * 100);
