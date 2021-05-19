@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const Input3 = ({userInputs, handleInputChange}) => {
 
 	return (
-		<div>
+		<div className='pages'>
 			<div>
 				<h3>How did that make you feel?</h3>
 				<p>Hopefully not afraid!</p>

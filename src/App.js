@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import LandingPage from '../src/components/pages/landingPage/landingpage';
-import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
+// import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
 // import FeelingWheel from './components/pages/feelingWheel';
 import Slider from './components/Slider';
 
@@ -29,26 +29,24 @@ export default function App() {
 
 	//TIMER DELAY WELCOME PAGE TO LANDING PAGE
 	const [show, setShow] = useState(false);
-  const [userInputs, setUserInputs] = useState(
-    [
-      {text:''},
-      {text:''},
-      {text:''},
-      {text:''},
-      {text:''},
-      {text:''},
-    ]
-  );
+	const [userInputs, setUserInputs] = useState([
+		{ text: '' },
+		{ text: '' },
+		{ text: '' },
+		{ text: '' },
+		{ text: '' },
+		{ text: '' },
+	]);
 
-  const handleInputChange = (evt) => {
-    let newInput = [...userInputs]
-    newInput[evt.target.name] = {text:evt.target.value}
-    setUserInputs(newInput)
-    console.log(newInput)
-  }
+	const handleInputChange = (evt) => {
+		let newInput = [...userInputs];
+		newInput[evt.target.name] = { text: evt.target.value };
+		setUserInputs(newInput);
+		console.log(newInput);
+	};
 
 	useEffect(() => {
-		let timer1 = setTimeout(() => setShow(true), delay * 1000);
+		let timer1 = setTimeout(() => setShow(true), delay * 100);
 		return () => {
 			clearTimeout(timer1);
 		};
@@ -56,9 +54,7 @@ export default function App() {
 
 	return show ? (
 		<div>
-			<WelcomeScreen />
-
-			<Slider userInputs={userInputs} handleInputChange={handleInputChange}/>
+			<Slider userInputs={userInputs} handleInputChange={handleInputChange} />
 		</div>
 	) : (
 		<div>
