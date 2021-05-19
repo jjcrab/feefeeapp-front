@@ -17,6 +17,16 @@ body,
 
 /* =====================Slider======================= */
 
+
+/* This is the font on the wheel */
+h4{
+	font-family: var(--main-font);
+	text-align: center;
+	color: black;
+		-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: black;
+
 .slider {
 	background: red;
 }
