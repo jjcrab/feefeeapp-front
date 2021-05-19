@@ -24,7 +24,6 @@ export default function App() {
 			headers: { Accept: 'application/json' },
 		});
 		const data = await response.json();
-    alert(data)
 		setEmotion(data);
 	};
 
