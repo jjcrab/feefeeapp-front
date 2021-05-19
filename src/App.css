@@ -1,5 +1,5 @@
 body {
-	font-family: Risque;
+  font-family: Risque;
 }
 
 /* html,
@@ -9,7 +9,6 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: Risque;
 }
 
 .pages {
@@ -19,7 +18,7 @@ body,
 /* =====================Slider======================= */
 
 .slider {
-	background: rgb(45, 126, 151);
+	background: red;
 }
 
 h3 {
