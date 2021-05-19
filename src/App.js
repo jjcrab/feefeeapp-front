@@ -54,7 +54,7 @@ export default function App() {
 
 	return show ? (
 		<div>
-			<Slider />
+			<Slider userInputs={userInputs} handleInputChange={handleInputChange} />
 		</div>
 	) : (
 		<div>

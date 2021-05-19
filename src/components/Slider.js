@@ -42,12 +42,6 @@ const Slider = ({ userInputs, handleInputChange }) => {
 					/>
 				</Carousel.Item>
 				<Carousel.Item>
-					<UserInput2
-						userInputs={userInputs}
-						handleInputChange={handleInputChange}
-					/>
-				</Carousel.Item>
-				<Carousel.Item>
 					<Input3
 						userInputs={userInputs}
 						handleInputChange={handleInputChange}
