@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserInput2 = (props) => {
 	return (
-		<div>
+		<div className='pages'>
 			<h3>usertInput2</h3>
 			<p>When I feel angry I:</p>
 			<form>

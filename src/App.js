@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import LandingPage from '../src/components/pages/landingPage/landingpage';
-import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
+// import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
 // import FeelingWheel from './components/pages/feelingWheel';
 import Slider from './components/Slider';
 
@@ -31,7 +31,7 @@ export default function App() {
 	const [show, setShow] = useState(false);
 
 	useEffect(() => {
-		let timer1 = setTimeout(() => setShow(true), delay * 1000);
+		let timer1 = setTimeout(() => setShow(true), delay * 100);
 		return () => {
 			clearTimeout(timer1);
 		};
@@ -39,8 +39,6 @@ export default function App() {
 
 	return show ? (
 		<div>
-			<WelcomeScreen />
-
 			<Slider />
 		</div>
 	) : (

@@ -2,7 +2,7 @@ import React from 'react';
 
 const StoryPage2 = () => {
 	return (
-		<div>
+		<div className='pages'>
 			<h3>Story Page 2</h3>
 			<h3>Angery</h3>
 

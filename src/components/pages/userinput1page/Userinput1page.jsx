@@ -6,7 +6,7 @@ export default function Userinput1page() {
   //Need the emotion name from the API call.
 
   return (
-    <div> 
+    <div className="pages">  
       <div class="centered">
         {/* We will have to add the interpolation for the emotion below */}
         {/* <h1 id="inputs">I feel {emotion.name}</h1> */}
@@ -24,6 +24,3 @@ export default function Userinput1page() {
     </div>
   );
 }
-
-
-

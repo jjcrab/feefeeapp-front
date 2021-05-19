@@ -14,7 +14,7 @@ const Input3 = () => {
 	};
 
 	return (
-		<div>
+		<div className='pages'>
 			<div>
 				<h3>How did that make you feel?</h3>
 				<p>Hopefully not afraid!</p>
