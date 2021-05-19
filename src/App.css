@@ -63,6 +63,9 @@ body,
 	height: 100vh;
 }
 
+.logoImg {
+	width: 50vw;
+}
 /* =====================Slider======================= */
 
 .slider {
