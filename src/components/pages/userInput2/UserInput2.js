@@ -1,10 +1,10 @@
 import React from 'react';
+import './UserInput2.css';
 
 const UserInput2 = ({userInputs, handleInputChange}) => {
 	return (
 		<div className='pages'>
-			<h3>usertInput2</h3>
-			<p>When I feel angry I:</p>
+			<h3>When I feel angry I:</h3>
 			<form>
 				<input 
           name={2} 

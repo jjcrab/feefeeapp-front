@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import StoryPage1 from './pages/StoryPage1';
 import StoryPage2 from './pages/StoryPage2';
 import StoryPage3 from './pages/StoryPage3';
-import UserInput2 from './pages/UserInput2';
+import UserInput2 from './pages/userInput2/UserInput2';
 
 import Userinput1page from './pages/userinput1page/Userinput1page';
 
