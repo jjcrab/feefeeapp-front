@@ -1,17 +1,6 @@
 import React, { useState } from 'react';
 
-const Input3 = () => {
-	const initialState = '';
-	const [formState, setFormState] = useState(initialState);
-
-	const handleChange = (event) => {
-		setFormState(event.target.value);
-	};
-
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		setFormState(initialState);
-	};
+const Input3 = ({userInputs, handleInputChange}) => {
 
 	return (
 		<div className='pages'>
@@ -20,12 +9,13 @@ const Input3 = () => {
 				<p>Hopefully not afraid!</p>
 			</div>
 
-			<form onSubmit={handleSubmit}>
+			<form>
 				<textarea
+          name={5}
 					cols='30'
 					rows='10'
-					onChange={handleChange}
-					value={formState}></textarea>
+					onChange={handleInputChange}
+					value={userInputs[5].text}></textarea>
 				<button type='submit'>See what we get</button>
 			</form>
 			<p>pssssst! You can fill in that box too!</p>
