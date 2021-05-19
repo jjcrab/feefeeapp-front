@@ -1,14 +1,3 @@
-h1 {
-  min-height: auto;
-  text-align: center;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 100px;
-  text-align: center;
-  justify-content: left;
-  margin: 0;
-}
 
 .centered {
   position: fixed;
@@ -22,12 +11,24 @@ h1 {
   padding: 20px;
 }
 
-input {
+.pages{
+  margin-top: 20%;
+}
+
+.pages input {
   display: inline;
-  height: 3rem;
-  width: 35%;
+  height: 5rem;
+  width: 50%;
+  font-size: 2rem;
+  font-family: Roboto;
+  margin-left: 25%;
+}
+
+.pages p{
+  font-family: Risque;
+  text-align: center;
   font-size: 1.5rem;
-  font-family: inter;
+  margin-top: 20px;
 }
 
 .flex-space-between {

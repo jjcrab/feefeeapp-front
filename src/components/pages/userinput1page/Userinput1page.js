@@ -1,5 +1,5 @@
 import React from 'react';
-// import './userinput1page.css';
+import './userinput1page.css';
 
 export default function Userinput1page({ userInputs, handleInputChange }) {
 	//Need the emotion name from the API call.
@@ -18,6 +18,7 @@ export default function Userinput1page({ userInputs, handleInputChange }) {
 			/>
 			<h3>because</h3>
 			<input name={1} value={userInputs[1].text} types='text' />
+			<p>psst! You can fill those blanks!</p>
 		</div>
 		// <div>
 		//   <div class="centered">
