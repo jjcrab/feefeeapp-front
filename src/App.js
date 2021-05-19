@@ -13,19 +13,33 @@ const changes = 5;
 
 const apiLocal = 'http://localhost:4000/api/emotion/';
 
-const apiHeroku = 'https://feelings-api1.herokuapp.com/api/emotion';
+const apiHeroku = 'https://feelings-api1.herokuapp.com/api/emotion/';
+const apiHerokuAll = 'https://feelings-api1.herokuapp.com/api/all';
 
 export default function App() {
 	//FETCH EMOTION STORY
 	const [emotion, setEmotion] = useState(null);
 
-	const getStory = async (emotionName) => {
-		const response = await fetch(apiLocal + { emotionName }, {
+	const getStory = async (emotionId) => {
+		const response = await fetch(apiHeroku +  emotionId , {
 			headers: { Accept: 'application/json' },
 		});
 		const data = await response.json();
+    // const randomStory = 1 + Math.floor((Math.random() * 2));
+    // console.log(randomStory) 
+    console.log(data.rows)
+    
 		setEmotion(data);
 	};
+
+  const getAllStories = async () => {
+    const response = await fetch(apiHerokuAll, {
+      headers: {Accept: 'application/json'},
+    });
+    console.log(response.json())
+  }
+  
+
 
 	//TIMER DELAY WELCOME PAGE TO LANDING PAGE
 	const [show, setShow] = useState(false);
@@ -54,6 +68,8 @@ export default function App() {
 
 	return show ? (
 		<div>
+      <button onClick={getAllStories}>WHASSSSSDAFIJLENIFBLAKJBFILEB:EJKFB:IAFDASD</button>
+      <button onClick={() => getStory(1)}>WHASSSSSDAFIJLENIFBLAKJBFILEB:EJKFB:IAFDASD</button>
 			<Slider userInputs={userInputs} handleInputChange={handleInputChange} />
 		</div>
 	) : (
