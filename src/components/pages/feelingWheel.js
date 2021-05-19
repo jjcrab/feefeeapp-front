@@ -40,9 +40,6 @@ function FeelingWheel(props) {
         labelPosition={100 - lineWidth / 2.4}
         onClick={(_, index) => {
           setSelected(index === selected ? undefined : index);
-          emotionWord = e.target.textContent.toLowerCase().split(' ')[0];
-          getStory(emotionWord);
-          setEmotion(emotionWord);
         }}
       />
       ;
