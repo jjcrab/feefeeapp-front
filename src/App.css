@@ -46,21 +46,42 @@ h5{
 	color: var(--orange);
 }
 
-html,
+/* html,
 body,
 #container {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .pages {
-	height: 100vh;
+  height: 100vh;
+}
+
+/* =====================Slider======================= */
+
+
+/* This is the font on the wheel */
+h4{
+	font-family: var(--main-font);
+	text-align: center;
+	color: black;
+		-webkit-text-fill-color: white; /* Will override color (regardless of order) */
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: black;
+
+.slider {
+	background: red;
+}
+
+h3 {
+	text-align: center;
+	padding-top: 20px;
+	zoom: 2;
 }
 
 /* =====================Story======================== */
-
-.slider {
-	background: rgb(45, 126, 151);
+.emotion2Img {
+	height: 300px;
 }
