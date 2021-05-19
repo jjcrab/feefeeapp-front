@@ -2,60 +2,68 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import LandingPage from '../src/components/pages/landingPage/landingpage';
 import WelcomeScreen from '../src/components/pages/welcomeScreen/welcomeScreen';
-import Storypage2 from './components/Storypage2';
-import Endpage from './components/Endpage';
-import FeelingWheel from './components/pages/feelingWheel';
+// import FeelingWheel from './components/pages/feelingWheel';
+import Slider from './components/Slider';
+
+import 'bootstrap/dist/css/bootstrap.css';
 
 const delay = 5;
 
-const apiLocal = 'http://localhost:4000/api/emotion/'
+const changes = 5;
 
-const apiHeroku = 'https://feelings-api1.herokuapp.com/api/emotion'
+const apiLocal = 'http://localhost:4000/api/emotion/';
+
+const apiHeroku = 'https://feelings-api1.herokuapp.com/api/emotion';
 
 export default function App() {
-	
 	//FETCH EMOTION STORY
-	const [emotion, setEmotion] = useState(null)
+	const [emotion, setEmotion] = useState(null);
 
 	const getStory = async (emotionName) => {
-		const response = await fetch(apiLocal + {emotionName},{
-			headers: {Accept: "application/json"}
-		})
-		const data = await response.json()
-		setEmotion(data)
-	}
-	
+		const response = await fetch(apiLocal + { emotionName }, {
+			headers: { Accept: 'application/json' },
+		});
+		const data = await response.json();
+    alert(data)
+		setEmotion(data);
+	};
+
 	//TIMER DELAY WELCOME PAGE TO LANDING PAGE
 	const [show, setShow] = useState(false);
+  const [userInputs, setUserInputs] = useState(
+    [
+      {text:''},
+      {text:''},
+      {text:''},
+      {text:''},
+      {text:''},
+      {text:''},
+    ]
+  );
 
-  useEffect(() => {
-    let timer1 = setTimeout(() => setShow(true), delay * 1000);
-    return () => {
-      clearTimeout(timer1);
-    };
-  }, []);
+  const handleInputChange = (evt) => {
+    let newInput = [...userInputs]
+    newInput[evt.target.name] = {text:evt.target.value}
+    setUserInputs(newInput)
+    console.log(newInput)
+  }
+
+	useEffect(() => {
+		let timer1 = setTimeout(() => setShow(true), delay * 1000);
+		return () => {
+			clearTimeout(timer1);
+		};
+	}, []);
 
 	return show ? (
 		<div>
 			<WelcomeScreen />
+
+			<Slider />
 		</div>
 	) : (
 		<div>
 			<LandingPage />
-			<Storypage2 getStory={getStory}/>
-			<Endpage />
 		</div>
 	);
-  return show ? (
-    <div>
-      <WelcomeScreen />
-      <FeelingWheel />
-      <Storypage2 />
-      <Endpage />
-    </div>
-  ) : (
-    <div>
-      <LandingPage />
-    </div>
-  );
 }
