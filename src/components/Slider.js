@@ -14,6 +14,9 @@ const Slider = () => {
 		<div>
 			<Carousel interval={null} className='slider'>
 				<Carousel.Item>
+					<FeelingWheel />
+				</Carousel.Item>
+				<Carousel.Item>
 					<StoryPage1 />
 				</Carousel.Item>
 				<Carousel.Item>
