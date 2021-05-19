@@ -1,8 +1,8 @@
 body {
-  font-family: Risque;
+	font-family: Risque;
 }
 
-html,
+/* html,
 body,
 #container {
   width: 100%;
@@ -16,14 +16,19 @@ body,
   height: 100vh;
 }
 
-/* =====================Story======================== */
+/* =====================Slider======================= */
 
 .slider {
-  background: rgb(45, 126, 151);
+	background: rgb(45, 126, 151);
 }
 
 h3 {
-  text-align: center;
-  padding-top: 20px;
-  zoom: 2;
+	text-align: center;
+	padding-top: 20px;
+	zoom: 2;
+}
+
+/* =====================Story======================== */
+.emotion2Img {
+	height: 300px;
 }

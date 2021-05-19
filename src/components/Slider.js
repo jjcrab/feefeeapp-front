@@ -21,6 +21,9 @@ const Slider = ({ userInputs, handleInputChange }) => {
 					<WelcomeScreen />
 				</Carousel.Item>
 				<Carousel.Item>
+					<FeelingWheel />
+				</Carousel.Item>
+				<Carousel.Item>
 					<StoryPage1 />
 				</Carousel.Item>
 				<Carousel.Item>
@@ -49,9 +52,6 @@ const Slider = ({ userInputs, handleInputChange }) => {
 				</Carousel.Item>
 				<Carousel.Item>
 					<Endpage />
-				</Carousel.Item>
-				<Carousel.Item>
-					<FeelingWheel />
 				</Carousel.Item>
 			</Carousel>
 		</div>

@@ -46,7 +46,7 @@ export default function App() {
 	};
 
 	useEffect(() => {
-		let timer1 = setTimeout(() => setShow(true), delay * 100);
+		let timer1 = setTimeout(() => setShow(true), delay * 400);
 		return () => {
 			clearTimeout(timer1);
 		};
