@@ -24,7 +24,7 @@ function feelingWheel(props) {
 			</h3>
 			<PieChart
 				lineWidth={99.9}
-				radius={PieChart.defaultProps.radius - 14}
+				radius={PieChart.defaultProps.radius - 15}
 				label={({ dataEntry }) => dataEntry.title}
 				data={data}
 				labelStyle={{
